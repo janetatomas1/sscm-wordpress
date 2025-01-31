@@ -1,6 +1,7 @@
 services:
   db_main:
     image: mysql:5.7
+    container_name: sscm_wordpress_db
     restart: always
     environment:
       MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
@@ -20,7 +21,7 @@ services:
       WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAMEr}
 
 volumes:
   db_data:
